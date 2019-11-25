@@ -4,6 +4,7 @@ import (
 	"fmt"
 
 	"github.com/quakelee/go-examples/commonfunctions/libs"
+	"github.com/quakelee/go-examples/commonfunctions/models"
 )
 
 func main() {
@@ -21,4 +22,11 @@ func main() {
 
 	// Covert int Slice or Array to String
 	fmt.Println(libs.IntSliceToString(nums, ", "))
+
+	// Example of show how to check struct empty
+	var test models.Test
+	//tt := "empty test"
+	//test.Type = &tt
+	pt := &test
+	fmt.Println(pt.IsEmpty())
 }
